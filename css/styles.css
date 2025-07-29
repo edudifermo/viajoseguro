@@ -1,0 +1,129 @@
+
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background-color: #f4f8fb;
+  color: #333;
+  line-height: 1.6;
+}
+
+.header-bar {
+  background: #003366;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.cotizaciones iframe {
+  height: 60px;
+  width: 150px;
+  margin-left: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+.hero {
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 2rem;
+  text-align: center;
+  color: white;
+  border-radius: 10px;
+}
+
+.overlay h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.slogan {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.cotizador-box {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+}
+
+.contacto {
+  padding: 3rem 2rem;
+  background-color: #e6f0fa;
+}
+
+.contacto h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.formulario-contacto {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.formulario-contacto label {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  font-size: 0.95rem;
+}
+
+.formulario-contacto input,
+.formulario-contacto textarea,
+.formulario-contacto select {
+  padding: 0.8rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.formulario-contacto button {
+  background-color: #ff6600;
+  color: white;
+  padding: 1rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.formulario-contacto button:hover {
+  background-color: #cc5200;
+}
+
+footer {
+  background-color: #003366;
+  color: white;
+  text-align: center;
+  padding: 1.5rem;
+  margin-top: 2rem;
+}

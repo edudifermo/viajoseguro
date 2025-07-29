@@ -1,11 +1,79 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-  </head>
-  <body>
-    <div id="root"></div>
-  </body>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Viajo Seguro</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script type="text/javascript" language="javascript" src="https://back.goassistance.com/cotizador/js/cotizador2024.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      createlanding(
+        "KDpzJ7bpHSeUGiHD%2FVDOAzW5u6FwBw0c6YLXi1ETAcA%2Fl5IaNuQjwWpwWhzd8DGoTSSUR7k72Oc%3D",
+        ["origen", "destino", "fechas", "edades", "email", "telefono"],
+        32,
+        "es-ES",
+        0,
+        "GO"
+      );
+    });
+  </script>
+</head>
+
+<body>
+  <header>
+    <div class="header-bar">
+      <div class="logo">ViajoSeguro.com.ar</div>
+      <div class="cotizaciones">
+        <iframe src="https://www.dolarhoy.com/i/cotizaciones/dolar-blue" frameborder="0"></iframe>
+        <iframe src="https://www.dolarhoy.com/i/cotizaciones/dolar-bancos-y-casas-de-cambio" frameborder="0"></iframe>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" style="background-image: url('../img/destinos-turisticos.png');">
+      <div class="overlay">
+        <h1>Viajo Seguro</h1>
+        <p class="slogan">Tu asistencia para viajar tranquilo, adonde sea que vayas.</p>
+        <div class="cotizador-box">
+          <h2>Calculá tu asistencia al viajero</h2>
+          <div id="landing"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contacto">
+      <h2>Contáctanos</h2>
+      <form action="https://formsubmit.co/difermoeduardo@gmail.com" method="POST" class="formulario-contacto">
+        <label>Nombre<input type="text" name="nombre" placeholder="Nombre" required></label>
+        <label>Email<input type="email" name="email" placeholder="Email" required></label>
+        <label>Teléfono<input type="tel" name="telefono" placeholder="Teléfono" pattern="[0-9]+" required></label>
+        <label>País
+          <select name="pais">
+            <option value="">Seleccioná tu país</option>
+            <option value="AR">Argentina</option>
+            <option value="BR">Brasil</option>
+            <option value="US">Estados Unidos</option>
+            <option value="ES">España</option>
+            <option value="MX">México</option>
+          </select>
+        </label>
+        <label>Mensaje<textarea name="mensaje" placeholder="¿En qué podemos ayudarte?" required></textarea></label>
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>Contacto: Eduardo Di Fermo | WhatsApp: 11-4175-3202</p>
+    <p>ViajoSeguro.com.ar es un sitio de ventas de asistencia al viajero operado por el agente autorizado Eduardo Di Fermo para GoAssistance.</p>
+  </footer>
+
+  
+</body>
+
+
+
 </html>
