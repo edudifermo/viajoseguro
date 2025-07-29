@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Viajo Seguro</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script type="text/javascript" language="javascript" src="https://back.goassistance.com/cotizador/js/cotizador2024.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-bar">
+      <div class="logo">ViajoSeguro.com.ar</div>
+      <div class="cotizaciones">
+        <iframe src="https://www.dolarhoy.com/i/cotizaciones/dolar-blue" frameborder="0"></iframe>
+        <iframe src="https://www.dolarhoy.com/i/cotizaciones/dolar-bancos-y-casas-de-cambio" frameborder="0"></iframe>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" style="background-image: url('../img/destinos-turisticos.png');">
+      <div class="overlay">
+        <h1>Viajo Seguro</h1>
+        <p class="slogan">Tu asistencia para viajar tranquilo, adonde sea que vayas.</p>
+        <div class="cotizador-box">
+          <h2>Completá tus datos para iniciar la cotización</h2>
+          <form id="pre-cotizador" action="https://formsubmit.co/difermoeduardo@gmail.com" method="POST" class="formulario-contacto">
+            <label>Nombre<input type="text" name="nombre" required></label>
+            <label>Email<input type="email" name="email" required></label>
+            <label>Teléfono (con DDI)<input type="tel" name="telefono" pattern="[0-9]+" required></label>
+            <label>País de origen
+              <select name="pais_origen" required>
+                <option value="">Seleccioná</option>
+                <option value="Argentina">Argentina</option>
+                <option value="Brasil">Brasil</option>
+                <option value="Estados Unidos">Estados Unidos</option>
+                <option value="España">España</option>
+                <option value="México">México</option>
+                <!-- Agregar más países -->
+              </select>
+            </label>
+            <label>Destino del viaje
+              <select name="pais_destino" required>
+                <option value="">Seleccioná</option>
+                <option value="Francia">Francia</option>
+                <option value="Italia">Italia</option>
+                <option value="Tailandia">Tailandia</option>
+                <option value="Estados Unidos">Estados Unidos</option>
+              </select>
+            </label>
+            <label>Fecha de salida<input type="date" name="fecha_salida"></label>
+            <label>Edad del viajero<input type="number" name="edad" min="0" max="120"></label>
+            <label>Mensaje<textarea name="mensaje" placeholder="¿En qué podemos ayudarte?"></textarea></label>
+            <button type="submit">Continuar con la cotización</button>
+          </form>
+          <div id="cotizador-container" style="display: none;">
+            <h2>Tu viaje tranquilo empieza acá. Calculá el costo.</h2>
+            <div id="landing"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Contacto: Eduardo Di Fermo | WhatsApp: 11-4175-3202</p>
+    <p>ViajoSeguro.com.ar es un sitio de ventas de asistencia al viajero operado por el agente autorizado Eduardo Di Fermo para GoAssistance.</p>
+  </footer>
+
+  <script>
+    document.getElementById("pre-cotizador").addEventListener("submit", function (e) {
+      e.preventDefault();
+      // Enviar el formulario
+      const form = e.target;
+      fetch(form.action, {
+        method: "POST",
+        body: new FormData(form),
+      }).then(() => {
+        form.style.display = "none";
+        document.getElementById("cotizador-container").style.display = "block";
+        createlanding(
+          "KDpzJ7bpHSeUGiHD%2FVDOAzW5u6FwBw0c6YLXi1ETAcA%2Fl5IaNuQjwWpwWhzd8DGoTSSUR7k72Oc%3D",
+          ["origen", "destino", "fechas", "edades", "email", "telefono"],
+          32,
+          "es-ES",
+          0,
+          "GO"
+        );
+      });
+    });
+  </script>
+</body>
+
+</html>
