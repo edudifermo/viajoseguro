@@ -1,0 +1,13 @@
+
+# For consistent end-of-line behavior
+* text=auto
+
+# Enforce LF for source code files
+*.js text eol=lf
+*.jsx text eol=lf
+*.ts text eol=lf
+*.tsx text eol=lf
+*.json text eol=lf
+*.css text eol=lf
+*.html text eol=lf
+*.md text eol=lf

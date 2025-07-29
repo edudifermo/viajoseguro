@@ -6,7 +6,7 @@ function Cotizador() {
     script.src = "https://back.goassistance.com/cotizador/js/cotizador2024.js";
     script.async = true;
     script.onload = () => {
-      if (typeof window.createlanding === 'function') {
+      if (window.createlanding) {
         window.createlanding(
           "KDpzJ7bpHSeUGiHD%2FVDOAzW5u6FwBw0c6YLXi1ETAcA%2Fl5IaNuQjwWpwWhzd8DGoTSSUR7k72Oc%3D",
           ["origen", "destino", "fechas", "edades", "email", "telefono"],
@@ -15,12 +15,7 @@ function Cotizador() {
           0,
           "GO"
         );
-      } else {
-        console.warn("No se pudo cargar createlanding");
       }
-    };
-    script.onerror = () => {
-      console.error("Error cargando el script del cotizador");
     };
     document.body.appendChild(script);
   }, []);
